@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function WhyUsSection() {
     return (
         <section
@@ -26,10 +28,13 @@ export default function WhyUsSection() {
                                         />
                                     </svg>
                                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-1">
-                                        <span className="text-6xl sm:text-7xl lg:text-8xl">🦜📚</span>
-                                        <span className="text-foreground/40 text-xs font-semibold uppercase tracking-widest mt-1">
-                                            Studying!
-                                        </span>
+                                        <Image
+                                            src="/working-mascot.png"
+                                            alt="Parrotingo Studying Mascot"
+                                            width={240}
+                                            height={240}
+                                            className="w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 object-contain drop-shadow-xl"
+                                        />
                                     </div>
                                 </div>
                             </div>
