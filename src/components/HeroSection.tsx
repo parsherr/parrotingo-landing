@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 
 export default function HeroSection() {
@@ -50,10 +51,13 @@ export default function HeroSection() {
                                 />
                             </svg>
                             <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-                                <span className="text-7xl sm:text-8xl xl:text-9xl drop-shadow-lg">🦜</span>
-                                <span className="text-white/40 text-xs font-semibold uppercase tracking-widest">
-                                    Mascot Parrot
-                                </span>
+                                <Image
+                                    src="/hero-mascot.png"
+                                    alt="Parrotingo Mascot"
+                                    width={320}
+                                    height={320}
+                                    className="w-48 h-48 sm:w-56 sm:h-56 xl:w-64 xl:h-64 object-contain drop-shadow-2xl"
+                                />
                             </div>
                         </div>
                     </div>
