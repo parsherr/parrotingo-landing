@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -22,16 +23,20 @@ export default function Header() {
         <header
             id="header"
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-                    ? "bg-[#EBEBEB] backdrop-blur-md border-b border-border/30 py-3"
-                    : "bg-transparent py-5"
+                ? "bg-[#EBEBEB] backdrop-blur-md border-b border-border/30 py-3"
+                : "bg-transparent py-5"
                 }`}
         >
             <div className="mx-auto max-w-5xl px-6 flex items-center justify-between">
                 {/* Logo */}
                 <a href="#" id="logo" className="flex items-center gap-2">
-                    <div className="w-9 h-9 rounded-xl bg-brand-orange border-2 border-black flex items-center justify-center">
-                        <span className="text-lg">🦜</span>
-                    </div>
+                    <Image
+                        src="/hero-mascot.png"
+                        alt="Parrotingo Logo"
+                        width={40}
+                        height={40}
+                        className="w-10 h-10 object-contain"
+                    />
                     <span
                         className={`text-xl font-extrabold tracking-tight ${scrolled ? "text-foreground" : "text-white"
                             }`}

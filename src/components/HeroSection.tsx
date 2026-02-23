@@ -35,31 +35,15 @@ export default function HeroSection() {
 
                     </div>
 
-                    {/* Right — Mascot blob */}
-                    <div className="flex-shrink-0 flex items-center justify-center animate-bob">
-                        <div className="relative flex items-center justify-center">
-                            <svg
-                                viewBox="0 0 320 300"
-                                className="w-64 h-60 sm:w-80 sm:h-72 xl:w-96 xl:h-88"
-                                fill="none"
-                            >
-                                <path
-                                    d="M160 20 C220 10, 300 60, 295 130 C290 200, 240 270, 160 275 C80 280, 20 220, 18 150 C16 80, 80 32, 160 20Z"
-                                    fill="rgba(255,255,255,0.12)"
-                                    stroke="rgba(255,255,255,0.25)"
-                                    strokeWidth="3"
-                                />
-                            </svg>
-                            <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-                                <Image
-                                    src="/hero-mascot.png"
-                                    alt="Parrotingo Mascot"
-                                    width={320}
-                                    height={320}
-                                    className="w-48 h-48 sm:w-56 sm:h-56 xl:w-64 xl:h-64 object-contain drop-shadow-2xl"
-                                />
-                            </div>
-                        </div>
+                    {/* Right — Mascot */}
+                    <div className="flex-shrink-0 flex items-center justify-center">
+                        <Image
+                            src="/hero-mascot.png"
+                            alt="Parrotingo Mascot"
+                            width={400}
+                            height={400}
+                            className="w-64 h-64 sm:w-80 sm:h-80 xl:w-96 xl:h-96 object-contain"
+                        />
                     </div>
                 </div>
             </div>

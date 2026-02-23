@@ -12,38 +12,22 @@ export default function WhyUsSection() {
                     <div className="bg-[#EBEBEB] rounded-[2.5rem] px-10 py-16 sm:px-16 lg:px-20 lg:py-20">
                         <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0">
 
-                            {/* Left — Mascot blob */}
+                            {/* Left — Mascot */}
                             <div className="flex-shrink-0 flex items-center justify-center order-2 lg:order-1">
-                                <div className="relative flex items-center justify-center">
-                                    <svg
-                                        viewBox="0 0 280 270"
-                                        className="w-52 h-48 sm:w-64 sm:h-60 lg:w-72 lg:h-64"
-                                        fill="none"
-                                    >
-                                        <path
-                                            d="M140 18 C195 5, 265 55, 262 125 C259 195, 210 258, 140 260 C70 262, 15 205, 14 135 C13 65, 75 32, 140 18Z"
-                                            fill="#d8dde6"
-                                            stroke="#b8c0cc"
-                                            strokeWidth="2.5"
-                                        />
-                                    </svg>
-                                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-1">
-                                        <Image
-                                            src="/working-mascot.png"
-                                            alt="Parrotingo Studying Mascot"
-                                            width={240}
-                                            height={240}
-                                            className="w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 object-contain drop-shadow-xl"
-                                        />
-                                    </div>
-                                </div>
+                                <Image
+                                    src="/working-mascot.png"
+                                    alt="Parrotingo Studying Mascot"
+                                    width={400}
+                                    height={400}
+                                    className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-contain"
+                                />
                             </div>
 
                             {/* Right — Content, geniş boşlukla sağda */}
                             <div className="flex-1 flex flex-col items-center text-center gap-6 order-1 lg:order-2 lg:pl-16 xl:pl-24">
                                 <h2 className="text-4xl sm:text-5xl font-extrabold text-foreground leading-tight tracking-tight w-full">
                                     Why{" "}
-                                    <span className="text-gradient-orange">Parrotingo</span>? 🦜
+                                    <span className="text-gradient-orange">Parrotingo</span>?
                                 </h2>
 
                                 {/* Düz paragraf — madde değil */}
