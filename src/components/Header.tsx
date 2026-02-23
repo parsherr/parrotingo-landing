@@ -85,7 +85,7 @@ export default function Header() {
 
             {/* Mobile Menu */}
             {mobileOpen && (
-                <div id="mobile-menu" className="md:hidden bg-white border-b border-border">
+                <div id="mobile-menu" className="md:hidden bg-[#EBEBEB] border-b border-border">
                     <nav className="flex flex-col items-center gap-2 p-5">
                         {navItems.map((item) => (
                             <a
