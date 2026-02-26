@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-    { label: "Home", href: "#home" },
+    { label: "Blog", href: "/blog" },
+    { label: "Word List", href: "/word-list" },
     { label: "Resources", href: "#why-us" },
 ];
 
@@ -23,7 +24,7 @@ export default function Header() {
         <header
             id="header"
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-                ? "bg-[#EBEBEB] backdrop-blur-md border-b border-border/30 py-3"
+                ? "bg-[#E8E0D8] backdrop-blur-md border-b border-border/30 py-3"
                 : "bg-transparent py-5"
                 }`}
         >
@@ -85,7 +86,7 @@ export default function Header() {
 
             {/* Mobile Menu */}
             {mobileOpen && (
-                <div id="mobile-menu" className="md:hidden bg-[#EBEBEB] border-b border-border">
+                <div id="mobile-menu" className="md:hidden bg-[#E8E0D8] border-b border-border">
                     <nav className="flex flex-col items-center gap-2 p-5">
                         {navItems.map((item) => (
                             <a

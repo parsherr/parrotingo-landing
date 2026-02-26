@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Highlighter } from "@/components/ui/highlighter";
 
 export default function NewsletterSection() {
     const [email, setEmail] = useState("");
@@ -24,7 +25,10 @@ export default function NewsletterSection() {
                 <div className="mx-auto max-w-5xl">
                     <div className="flex flex-col items-center text-center gap-6">
                         <h2 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight tracking-tight">
-                            We&apos;re in demo now,<br />but u can get notified<br />when we&apos;re done! 🎉
+                            Subscribe to our{" "}
+                            <Highlighter action="box" color="#FFFFFF99" strokeWidth={2.5} animationDuration={800} isView>
+                                newsletter!
+                            </Highlighter>
                         </h2>
 
                         <form

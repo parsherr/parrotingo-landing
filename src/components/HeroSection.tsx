@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
+import { Highlighter } from "@/components/ui/highlighter";
 
 export default function HeroSection() {
     return (
@@ -13,14 +14,15 @@ export default function HeroSection() {
                     {/* Left — Text + single CTA */}
                     <div className="flex-1 flex flex-col items-start gap-6 text-left">
                         <h1 className="text-5xl sm:text-6xl xl:text-7xl font-extrabold text-white leading-[1.1] tracking-tight">
-                            Learn Languages
-                            <br />
-                            the fun way! 🎉
+                            Your{" "}
+                            <Highlighter action="underline" color="#F0944D" strokeWidth={3} animationDuration={800} isView>
+                                smart way
+                            </Highlighter>{" "}
+                            to YDT vocabulary
                         </h1>
 
                         <p className="text-lg text-white/75 leading-relaxed max-w-md">
-                            Parrotingo makes language learning feel like a game — not a
-                            chore. Start speaking fluently with daily bite-sized lessons.
+                            Study essential YDT words with clear explanations, example sentences, and effective practice.
                         </p>
 
                         {/* Cartoon neobrutalist pill button */}
