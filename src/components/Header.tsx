@@ -30,20 +30,19 @@ export default function Header() {
         >
             <div className="mx-auto max-w-5xl px-6 flex items-center justify-between">
                 {/* Logo */}
-                <a href="#" id="logo" className="flex items-center gap-2">
-                    <Image
-                        src="/hero-mascot.png"
-                        alt="Parrotingo Logo"
-                        width={40}
-                        height={40}
-                        className="w-10 h-10 object-contain"
-                    />
-                    <span
-                        className={`text-xl font-extrabold tracking-tight ${scrolled ? "text-foreground" : "text-white"
-                            }`}
-                    >
-                        Parrotingo
-                    </span>
+                <a href="#" id="logo">
+                    <div className="bg-[#E69A16] rounded-2xl px-4 py-1 flex items-center gap-2 border-[3px] border-black/30">
+                        <Image
+                            src="/logo.png"
+                            alt="Parrotingo Logo"
+                            width={40}
+                            height={40}
+                            className="w-9 h-9 object-contain"
+                        />
+                        <span className="text-xl font-black tracking-tight text-white">
+                            Parrotingo
+                        </span>
+                    </div>
                 </a>
 
                 {/* Desktop Nav */}

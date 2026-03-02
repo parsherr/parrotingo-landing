@@ -33,18 +33,24 @@ export default function HeroSection() {
                         >
                             Start now!
                         </a>
-
-
                     </div>
 
                     {/* Right — Mascot */}
-                    <div className="flex-shrink-0 flex items-center justify-center">
+                    <div className="flex-shrink-0 relative flex items-center justify-center">
                         <Image
-                            src="/hero-mascot.png"
+                            src="/bird-2.png"
                             alt="Parrotingo Mascot"
                             width={400}
                             height={400}
-                            className="w-64 h-64 sm:w-80 sm:h-80 xl:w-96 xl:h-96 object-contain"
+                            className="w-64 h-64 sm:w-80 sm:h-80 xl:w-96 xl:h-96 object-contain relative z-10 -translate-y-8"
+                        />
+                        {/* Dal (Branch) — Positioned relatively to the bird */}
+                        <Image
+                            src="/dal.png"
+                            alt="Branch"
+                            width={600}
+                            height={300}
+                            className="absolute bottom-[-154%] left-1/2 -translate-x-[25%] w-[250%] max-w-none h-auto object-contain z-0"
                         />
                     </div>
                 </div>
