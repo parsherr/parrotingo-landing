@@ -20,14 +20,14 @@ export default function WordCard({ word, index }: WordCardProps) {
                 {word.word}
             </span>
 
-            {/* Turkish meaning */}
-            <p className="text-sm text-foreground/60 font-medium">
-                {word.meaning}
-            </p>
-
             {/* English definition */}
             <p className="text-xs text-foreground/40 italic leading-relaxed">
-                {word.definition}
+                {word.englishDefinition}
+            </p>
+
+            {/* Turkish definition */}
+            <p className="text-sm text-foreground/60 font-medium">
+                {word.turkishDefinition}
             </p>
         </div>
     );

@@ -15,8 +15,8 @@ export default function WordTable({ words }: WordTableProps) {
                 <thead>
                     <tr className="bg-brand-blue text-white text-left">
                         <th className="px-5 py-4 text-sm font-bold uppercase tracking-wider">Word</th>
-                        <th className="px-5 py-4 text-sm font-bold uppercase tracking-wider">Meaning</th>
                         <th className="px-5 py-4 text-sm font-bold uppercase tracking-wider">Definition</th>
+                        <th className="px-5 py-4 text-sm font-bold uppercase tracking-wider">Turkish Definition</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,13 +32,13 @@ export default function WordTable({ words }: WordTableProps) {
                                 </span>
                             </td>
                             <td className="px-5 py-3.5">
-                                <span className="text-sm text-foreground/60 font-medium">
-                                    {word.meaning}
+                                <span className="text-sm text-foreground/45 italic leading-relaxed">
+                                    {word.englishDefinition}
                                 </span>
                             </td>
                             <td className="px-5 py-3.5">
-                                <span className="text-sm text-foreground/45 italic leading-relaxed">
-                                    {word.definition}
+                                <span className="text-sm text-foreground/60 font-medium">
+                                    {word.turkishDefinition}
                                 </span>
                             </td>
                         </tr>
