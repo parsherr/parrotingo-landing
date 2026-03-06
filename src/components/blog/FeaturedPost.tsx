@@ -36,7 +36,7 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
                         <div className="relative z-10 flex flex-col items-center gap-3">
                             <div className="bg-white rounded-full px-5 py-2 border-[3px] border-black shadow-[3px_3px_0px_0px_#000]">
                                 <span className="text-sm font-extrabold text-foreground tracking-tight">
-                                    ⭐ Featured
+                                    Featured blog
                                 </span>
                             </div>
                             <Image
