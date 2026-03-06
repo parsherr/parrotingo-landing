@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
     { label: "Blog", href: "/blog" },
     { label: "Word List", href: "/word-list" },
-    { label: "Resources", href: "#why-us" },
+    { label: "Resources", href: "/#why-us" },
 ];
 
 export default function Header() {
@@ -30,7 +31,7 @@ export default function Header() {
         >
             <div className="mx-auto max-w-5xl px-6 flex items-center justify-between">
                 {/* Logo */}
-                <a href="#" id="logo">
+                <Link href="/" id="logo">
                     <div className="bg-[#E69A16] rounded-2xl px-4 py-1 flex items-center gap-2 border-[3px] border-black/30">
                         <Image
                             src="/logo.png"
@@ -43,12 +44,12 @@ export default function Header() {
                             Parrotingo
                         </span>
                     </div>
-                </a>
+                </Link>
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-8" id="desktop-nav">
                     {navItems.map((item) => (
-                        <a
+                        <Link
                             key={item.label}
                             href={item.href}
                             id={`nav-${item.label.toLowerCase()}`}
@@ -56,16 +57,16 @@ export default function Header() {
                                 }`}
                         >
                             {item.label}
-                        </a>
+                        </Link>
                     ))}
                     {/* Cartoon pill button */}
-                    <a
+                    <Link
                         href="#register"
                         id="nav-register"
                         className="text-sm font-extrabold px-6 py-2.5 rounded-full bg-brand-orange text-white border-[3px] border-black shadow-[4px_4px_0px_0px_#000] hover:shadow-[2px_2px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all duration-100"
                     >
                         Register
-                    </a>
+                    </Link>
                 </nav>
 
                 {/* Mobile Toggle */}
@@ -88,22 +89,22 @@ export default function Header() {
                 <div id="mobile-menu" className="md:hidden bg-[#E8E0D8] border-b border-border">
                     <nav className="flex flex-col items-center gap-2 p-5">
                         {navItems.map((item) => (
-                            <a
+                            <Link
                                 key={item.label}
                                 href={item.href}
                                 onClick={() => setMobileOpen(false)}
                                 className="w-full text-center py-3 text-base font-semibold text-foreground/70 hover:text-foreground rounded-xl hover:bg-muted transition-colors"
                             >
                                 {item.label}
-                            </a>
+                            </Link>
                         ))}
-                        <a
+                        <Link
                             href="#register"
                             onClick={() => setMobileOpen(false)}
                             className="mt-1 w-full text-center py-3 text-base font-extrabold rounded-full bg-brand-orange text-white border-[3px] border-black shadow-[4px_4px_0px_0px_#000] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all duration-100"
                         >
                             Register
-                        </a>
+                        </Link>
                     </nav>
                 </div>
             )}

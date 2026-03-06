@@ -66,7 +66,7 @@ export default function BlogSection() {
                         {blogPosts.map((post, i) => (
                             <article
                                 key={post.id}
-                                className="bg-white rounded-2xl border-[3px] border-black shadow-[5px_5px_0px_0px_#000] hover:shadow-[2px_2px_0px_0px_#000] hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-150 overflow-hidden group cursor-pointer flex flex-col"
+                                className="bg-[#E8E0D8] rounded-2xl border-[3px] border-black shadow-[5px_5px_0px_0px_#000] hover:shadow-[2px_2px_0px_0px_#000] hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-150 overflow-hidden group cursor-pointer flex flex-col"
                                 style={{
                                     transform: `rotate(${cardRotations[i]}deg)`,
                                 }}

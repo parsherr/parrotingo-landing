@@ -36,7 +36,6 @@ export default function NewsletterSection() {
                             id="newsletter-form"
                             className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-lg mx-auto mt-4"
                         >
-                            {/* Input — cartoon style with thick black border */}
                             <input
                                 type="email"
                                 id="newsletter-email"
@@ -44,7 +43,7 @@ export default function NewsletterSection() {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
-                                className="flex-1 w-full h-14 px-6 rounded-full bg-white text-foreground text-base font-medium placeholder:text-foreground/40 border-[3px] border-black shadow-[4px_4px_0px_0px_#000] focus:outline-none focus:shadow-[2px_2px_0px_0px_#000] focus:translate-x-[2px] focus:translate-y-[2px] transition-all duration-100"
+                                className="flex-1 w-full py-3 sm:h-14 px-6 rounded-full bg-[#E8E0D8] text-foreground text-base font-medium placeholder:text-foreground/40 border-[3px] border-black shadow-[4px_4px_0px_0px_#000] focus:outline-none focus:shadow-[2px_2px_0px_0px_#000] focus:translate-x-[2px] focus:translate-y-[2px] transition-all duration-100"
                             />
                             {/* Subscribe — cartoon neobrutalist pill button */}
                             <button

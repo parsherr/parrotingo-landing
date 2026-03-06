@@ -144,6 +144,100 @@
   background: inherit;
 }
 
+/* ── Blog article typography ── */
+.prose-parrotingo {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.prose-parrotingo h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.85);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid #E8651A;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.prose-parrotingo h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.78);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.prose-parrotingo p {
+  margin-bottom: 1.25rem;
+}
+
+.prose-parrotingo strong {
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.prose-parrotingo blockquote {
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid #D4843A;
+  background: rgba(232, 101, 26, 0.06);
+  border-radius: 0 1rem 1rem 0;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.75;
+}
+
+.prose-parrotingo ul {
+  margin: 1.25rem 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.prose-parrotingo ul li {
+  padding-left: 1.75rem;
+  position: relative;
+}
+
+.prose-parrotingo ul li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #E8651A;
+  font-size: 0.85rem;
+}
+
+.prose-parrotingo a {
+  color: #E8651A;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.prose-parrotingo a:hover {
+  color: #C75510;
+}
+
+/* ── Hide scrollbar for filter chips ── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
