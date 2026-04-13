@@ -2,23 +2,27 @@
 
 import { useState, useMemo } from "react";
 import { Search } from "lucide-react";
-import { wordList } from "@/data/wordList";
 import WordTable from "@/components/word-list/WordTable";
 import WordCard from "@/components/word-list/WordCard";
+import { Word } from "@/data/wordList";
 
-export default function WordListClient() {
+interface WordListClientProps {
+    initialWords: Word[];
+}
+
+export default function WordListClient({ initialWords }: WordListClientProps) {
     const [search, setSearch] = useState("");
 
     const filteredWords = useMemo(() => {
-        if (search === "") return wordList;
+        if (search === "") return initialWords;
         const q = search.toLowerCase();
-        return wordList.filter(
+        return initialWords.filter(
             (w) =>
                 w.word.toLowerCase().includes(q) ||
                 w.meaning.toLowerCase().includes(q) ||
                 w.definition.toLowerCase().includes(q)
         );
-    }, [search]);
+    }, [search, initialWords]);
 
     return (
         <div className="bg-brand-blue">

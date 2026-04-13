@@ -27,11 +27,11 @@ export default function HeroSection() {
 
                         {/* Cartoon neobrutalist pill button */}
                         <a
-                            href="#register"
+                            href="https://demo.parrotingo.com"
                             id="hero-start-now"
                             className="inline-flex items-center px-12 gap-2 px-10 py-4 rounded-full bg-brand-orange-light text-white text-lg font-extrabold border-[3px] border-black shadow-[6px_6px_0px_0px_#000] hover:shadow-[3px_3px_0px_0px_#000] hover:translate-x-[3px] hover:translate-y-[3px] active:shadow-none active:translate-x-[6px] active:translate-y-[6px] transition-all duration-100"
                         >
-                            Start now!
+                            Start Now!
                         </a>
                     </div>
 

@@ -37,11 +37,11 @@ export default function WordListCTA() {
                                 Join thousands of students who are studying smarter with Parrotingo. Build your vocabulary, ace your YDT exam.
                             </p>
                             <a
-                                href="#register"
-                                id="wordlist-register-cta"
+                                href="https://demo.parrotingo.com"
+                                id="wordlist-start-now-cta"
                                 className="inline-flex items-center gap-2 px-10 py-4 rounded-full bg-brand-orange text-white text-lg font-extrabold border-[3px] border-black shadow-[6px_6px_0px_0px_#000] hover:shadow-[3px_3px_0px_0px_#000] hover:translate-x-[3px] hover:translate-y-[3px] active:shadow-none active:translate-x-[6px] active:translate-y-[6px] transition-all duration-100"
                             >
-                                Register now →
+                                Start Now!
                             </a>
                         </div>
                     </div>

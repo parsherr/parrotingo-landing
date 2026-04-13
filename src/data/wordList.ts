@@ -1,5 +1,5 @@
 export type Word = {
-    id: number;
+    id: string | number;
     word: string;
     meaning: string;
     definition: string;

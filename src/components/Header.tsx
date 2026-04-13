@@ -61,11 +61,11 @@ export default function Header() {
                     ))}
                     {/* Cartoon pill button */}
                     <Link
-                        href="#register"
-                        id="nav-register"
+                        href="https://demo.parrotingo.com"
+                        id="nav-start-now"
                         className="text-sm font-extrabold px-6 py-2.5 rounded-full bg-brand-orange text-white border-[3px] border-black shadow-[4px_4px_0px_0px_#000] hover:shadow-[2px_2px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all duration-100"
                     >
-                        Register
+                        Start Now!
                     </Link>
                 </nav>
 
@@ -99,11 +99,11 @@ export default function Header() {
                             </Link>
                         ))}
                         <Link
-                            href="#register"
+                            href="https://demo.parrotingo.com"
                             onClick={() => setMobileOpen(false)}
                             className="mt-1 w-full text-center py-3 text-base font-extrabold rounded-full bg-brand-orange text-white border-[3px] border-black shadow-[4px_4px_0px_0px_#000] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all duration-100"
                         >
-                            Register
+                            Start Now!
                         </Link>
                     </nav>
                 </div>

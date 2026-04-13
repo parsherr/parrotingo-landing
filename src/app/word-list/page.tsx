@@ -5,6 +5,7 @@ import WordListClient from "@/components/word-list/WordListClient";
 import WordListCTA from "@/components/word-list/WordListCTA";
 import NewsletterSection from "@/components/NewsletterSection";
 import Footer from "@/components/Footer";
+import { Word } from "@/data/wordList";
 
 export const metadata: Metadata = {
     title: "Word List | Parrotingo — Essential YDT Vocabulary",
@@ -19,13 +20,40 @@ export const metadata: Metadata = {
     ],
 };
 
-export default function WordListPage() {
+async function getWords(): Promise<Word[]> {
+    try {
+        const res = await fetch("https://admin.parrotingo.com/api/curriculum", {
+            cache: 'no-store' // Ensure fresh data on every request
+        });
+
+        if (!res.ok) {
+            console.error("Failed to fetch curriculum on server");
+            return [];
+        }
+
+        const data = await res.json();
+
+        return (data.words || []).map((w: any) => ({
+            id: w.id,
+            word: w.word,
+            meaning: w.definition_tr || "",
+            definition: w.definition || ""
+        }));
+    } catch (error) {
+        console.error("Error in getWords:", error);
+        return [];
+    }
+}
+
+export default async function WordListPage() {
+    const words = await getWords();
+
     return (
         <>
             <Header />
             <main>
                 <WordListHero />
-                <WordListClient />
+                <WordListClient initialWords={words} />
                 <WordListCTA />
                 <NewsletterSection />
             </main>
