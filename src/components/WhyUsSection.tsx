@@ -16,7 +16,7 @@ export default function WhyUsSection() {
                             {/* Left — Mascot */}
                             <div className="flex-shrink-0 flex items-center justify-center order-2 lg:order-1">
                                 <Image
-                                    src="/working-mascot.png"
+                                    src="/parrotingo-mascot-1.png"
                                     alt="Parrotingo Studying Mascot"
                                     width={400}
                                     height={400}

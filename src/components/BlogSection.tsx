@@ -107,17 +107,6 @@ export default function BlogSection() {
                         ))}
                     </div>
 
-                    {/* ── Decorative star ── */}
-                    <div className="flex justify-center mt-6">
-                        <Image
-                            src="/star2.png"
-                            alt=""
-                            width={24}
-                            height={24}
-                            className="w-6 h-6 object-contain opacity-50"
-                            style={{ transform: "rotate(20deg)" }}
-                        />
-                    </div>
 
                     {/* ── View all button ── */}
                     <div className="flex justify-center mt-6">
