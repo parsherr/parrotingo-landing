@@ -45,8 +45,8 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    {/* Right — Link columns */}
-                    <div className="flex gap-12 sm:gap-16">
+                    {/* Right — Link columns + TÜBİTAK logo */}
+                    <div className="w-full lg:w-auto flex flex-wrap gap-8 sm:gap-12 lg:gap-16 items-center">
                         {footerLinks.map((group) => (
                             <div key={group.title} className="flex flex-col gap-2">
                                 <h4 className="text-white/60 font-bold text-xs uppercase tracking-wider mb-1">
@@ -63,14 +63,23 @@ export default function Footer() {
                                 ))}
                             </div>
                         ))}
+                        <div className="flex flex-col items-center gap-2">
+                            <img
+                                src="/tubitak_logo.svg"
+                                alt="TÜBİTAK"
+                                className="h-20 sm:h-24 lg:h-28 w-auto opacity-60"
+                            />
+                            <a
+                                href="https://github.com/parsherr"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white/55 hover:text-white text-sm font-semibold transition-colors duration-200"
+                            >
+                                made by Dogukan
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                {/* <div className="mt-10 pt-6 border-t border-white/10 text-center">
-                    <p className="text-white/25 text-sm">
-                        © {new Date().getFullYear()} Parrotingo. All rights reserved.
-                    </p>
-                </div> */}
             </div>
         </footer>
     );
