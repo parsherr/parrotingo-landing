@@ -26,13 +26,39 @@ export default function HeroSection() {
                         </p>
 
                         {/* Cartoon neobrutalist pill button */}
-                        <a
-                            href="https://demo.parrotingo.com"
-                            id="hero-start-now"
-                            className="inline-flex items-center px-12 gap-2 px-10 py-4 rounded-full bg-brand-orange-light text-white text-lg font-extrabold border-[3px] border-black shadow-[6px_6px_0px_0px_#000] hover:shadow-[3px_3px_0px_0px_#000] hover:translate-x-[3px] hover:translate-y-[3px] active:shadow-none active:translate-x-[6px] active:translate-y-[6px] transition-all duration-100"
-                        >
-                            Start Now!
-                        </a>
+                        <div className="relative">
+                            {/* Arrow 1 — bottom-left pointing up toward button */}
+                            <Image
+                                src="/arrow.png"
+                                alt=""
+                                width={56}
+                                height={56}
+                                className="absolute -bottom-20 left-16 w-14 h-14 object-contain hidden sm:block"
+                                style={{
+                                    filter: "brightness(0) saturate(100%) invert(41%) sepia(94%) saturate(673%) hue-rotate(357deg) brightness(102%)",
+                                    transform: "rotate(60deg) scaleX(-1)",
+                                }}
+                            />
+                            {/* Arrow 2 — bottom-right pointing up toward button */}
+                            <Image
+                                src="/arrow.png"
+                                alt=""
+                                width={56}
+                                height={56}
+                                className="absolute -bottom-18 -right-4 w-12 h-12 object-contain hidden sm:block"
+                                style={{
+                                    filter: "brightness(0) saturate(100%) invert(41%) sepia(94%) saturate(673%) hue-rotate(357deg) brightness(102%)",
+                                    transform: "rotate(30deg) scaleX(-1.4)",
+                                }}
+                            />
+                            <a
+                                href="https://demo.parrotingo.com"
+                                id="hero-start-now"
+                                className="inline-flex items-center px-12 gap-2 px-10 py-4 rounded-full bg-brand-orange-light text-white text-lg font-extrabold border-[3px] border-black shadow-[6px_6px_0px_0px_#000] hover:shadow-[3px_3px_0px_0px_#000] hover:translate-x-[3px] hover:translate-y-[3px] active:shadow-none active:translate-x-[6px] active:translate-y-[6px] transition-all duration-100"
+                            >
+                                Start Now!
+                            </a>
+                        </div>
                     </div>
 
                     {/* Right — Mascot */}

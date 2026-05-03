@@ -11,42 +11,40 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
         <Link href={`/blog/${post.slug}`} id="featured-post">
             <article
                 className="bg-[#E8E0D8] rounded-3xl border-[3px] border-black shadow-[7px_7px_0px_0px_#000] hover:shadow-[3px_3px_0px_0px_#000] hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-150 overflow-hidden group cursor-pointer"
-                style={{ transform: "rotate(-0.5deg)" }}
+                style={{}}
             >
                 <div className="flex flex-col lg:flex-row">
-                    {/* Left — Accent visual */}
+                    {/* Left — Visual panel */}
                     <div
-                        className="relative w-full lg:w-[340px] min-h-[200px] lg:min-h-[300px] flex-shrink-0 flex items-center justify-center overflow-hidden"
+                        className="relative w-full lg:w-[320px] min-h-[240px] lg:min-h-[320px] flex-shrink-0 flex items-center justify-center overflow-hidden"
                         style={{
-                            background: `linear-gradient(135deg, ${post.accent}, ${post.accent}88)`,
+                            background: `linear-gradient(160deg, ${post.accent}cc, ${post.accent})`,
                         }}
                     >
-                        {/* Decorative pattern */}
-                        <div className="absolute inset-0 opacity-10">
-                            <div
-                                className="absolute inset-0"
-                                style={{
-                                    backgroundImage: `radial-gradient(circle, #000 1px, transparent 1px)`,
-                                    backgroundSize: "20px 20px",
-                                }}
-                            />
+                        {/* Dot pattern bg */}
+                        <div
+                            className="absolute inset-0 opacity-10"
+                            style={{
+                                backgroundImage: `radial-gradient(circle, #000 1px, transparent 1px)`,
+                                backgroundSize: "18px 18px",
+                            }}
+                        />
+
+                        {/* Featured sticker — top-left */}
+                        <div className="absolute top-5 left-5 z-10">
+                            <div className="bg-white rounded-full px-4 py-1.5 border-[3px] border-black shadow-[3px_3px_0px_0px_#000] flex items-center gap-1.5">
+                                <span className="text-xs font-black text-foreground tracking-tight uppercase">⭐ Featured</span>
+                            </div>
                         </div>
 
-                        {/* Featured badge */}
-                        <div className="relative z-10 flex flex-col items-center gap-3">
-                            <div className="bg-white rounded-full px-5 py-2 border-[3px] border-black shadow-[3px_3px_0px_0px_#000]">
-                                <span className="text-sm font-extrabold text-foreground tracking-tight">
-                                    Featured blog
-                                </span>
-                            </div>
-                            <Image
-                                src="/star1.png"
-                                alt=""
-                                width={40}
-                                height={40}
-                                className="w-10 h-10 object-contain animate-bob"
-                            />
-                        </div>
+                        {/* Mascot — anchored to bottom */}
+                        <Image
+                            src="/parrotingo-mascot-1.png"
+                            alt="Parrotingo mascot"
+                            width={180}
+                            height={220}
+                            className="relative z-10 w-[180px] lg:w-[220px] object-contain drop-shadow-xl"
+                        />
                     </div>
 
                     {/* Right — Content */}

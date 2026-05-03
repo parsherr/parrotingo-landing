@@ -8,7 +8,7 @@ import { Menu, X } from "lucide-react";
 const navItems = [
     { label: "Blog", href: "/blog" },
     { label: "Word List", href: "/word-list" },
-    { label: "Resources", href: "/#why-us" },
+    { label: "Resources", href: "/resources" },
 ];
 
 export default function Header() {

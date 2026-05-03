@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const footerLinks = [
     {
         title: "Product",
@@ -23,14 +26,20 @@ export default function Footer() {
                 <div className="flex flex-col lg:flex-row items-start justify-between gap-10">
                     {/* Left — Logo + tagline */}
                     <div className="flex flex-col gap-3">
-                        <div className="flex items-center gap-2">
-                            <div className="w-9 h-9 rounded-xl bg-brand-orange flex items-center justify-center">
-                                <span className="text-lg">🦜</span>
+                        <Link href="/">
+                            <div className="bg-[#E69A16] rounded-2xl px-4 py-1 flex items-center gap-2 border-[3px] border-black/30 w-fit">
+                                <Image
+                                    src="/logo.png"
+                                    alt="Parrotingo Logo"
+                                    width={40}
+                                    height={40}
+                                    className="w-9 h-9 object-contain"
+                                />
+                                <span className="text-xl font-black tracking-tight text-white">
+                                    Parrotingo
+                                </span>
                             </div>
-                            <span className="text-xl font-extrabold text-white tracking-tight">
-                                Parrot<span className="text-brand-orange-light">ingo</span>
-                            </span>
-                        </div>
+                        </Link>
                         <p className="text-white/45 text-sm max-w-[200px] leading-relaxed">
                             Language learning that actually sticks. 🌍
                         </p>
@@ -57,11 +66,11 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="mt-10 pt-6 border-t border-white/10 text-center">
+                {/* <div className="mt-10 pt-6 border-t border-white/10 text-center">
                     <p className="text-white/25 text-sm">
                         © {new Date().getFullYear()} Parrotingo. All rights reserved.
                     </p>
-                </div>
+                </div> */}
             </div>
         </footer>
     );

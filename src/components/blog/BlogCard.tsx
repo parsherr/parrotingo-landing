@@ -6,8 +6,7 @@ interface BlogCardProps {
     index: number;
 }
 
-/* Slight rotations for the hand-drawn cartoon feel */
-const cardRotations = [-1.2, 0.6, -0.8, 0.9, -0.5, 1.1, -0.7, 0.4, -1.0];
+const cardRotations = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 export default function BlogCard({ post, index }: BlogCardProps) {
     const rotation = cardRotations[index % cardRotations.length];

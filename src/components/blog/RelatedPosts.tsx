@@ -12,7 +12,7 @@ export default function RelatedPosts({ posts }: RelatedPostsProps) {
     return (
         <section
             id="related-posts"
-            className="bg-gradient-to-b from-[#E8E0D8] to-brand-orange"
+            className="bg-gradient-to-b from-brand-blue to-brand-orange"
         >
             <div className="w-full bg-brand-blue rounded-[3rem] px-6 py-16 lg:py-20">
                 <div className="mx-auto max-w-5xl">

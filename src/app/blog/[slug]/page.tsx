@@ -7,16 +7,14 @@ import ArticleHero from "@/components/blog/ArticleHero";
 import ArticleBody from "@/components/blog/ArticleBody";
 import RelatedPosts from "@/components/blog/RelatedPosts";
 import { blogPosts } from "@/data/blogPosts";
-import { blogContents } from "@/data/blogContents";
+import { getBlogContent } from "@/lib/getBlogContent";
 
-/* ── Static params for all known slugs ── */
 export function generateStaticParams() {
     return blogPosts.map((post) => ({
         slug: post.slug,
     }));
 }
 
-/* ── Dynamic metadata ── */
 type Params = Promise<{ slug: string }>;
 
 export async function generateMetadata({
@@ -42,7 +40,6 @@ export async function generateMetadata({
     };
 }
 
-/* ── Page component ── */
 export default async function BlogPostPage({
     params,
 }: {
@@ -55,15 +52,13 @@ export default async function BlogPostPage({
         notFound();
     }
 
-    const content = blogContents[slug] ?? "<p>Content coming soon…</p>";
+    const content = await getBlogContent(slug);
 
-    /* Related posts: same category, exclude current, max 3 */
     const related = blogPosts
         .filter((p) => p.id !== post.id)
         .filter((p) => p.category === post.category)
         .slice(0, 3);
 
-    /* If not enough same-category posts, fill with random others */
     const finalRelated =
         related.length >= 3
             ? related
