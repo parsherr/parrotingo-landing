@@ -69,15 +69,7 @@ export default function Footer() {
                                 alt="TÜBİTAK"
                                 className="h-20 sm:h-24 lg:h-28 w-auto opacity-60"
                             />
-                            <a
-                                href="https://github.com/parsherr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-white/55 hover:text-white text-sm font-semibold transition-colors duration-200"
-                            >
-                                made by Dogukan
-                            </a>
-                        </div>
+                                                    </div>
                     </div>
                 </div>
             </div>
